@@ -18,7 +18,7 @@
    if (gioiTinh.toLowerCase("nam")) {
        tenDem = "Văn";
    } else if (gioiTinh.toLowerCase("nữ")) {
-       tenDem = "Vẽ";
+       tenDem = "Thị";
    } else {
        console.log("giới tính không hợp lệ ");
    }

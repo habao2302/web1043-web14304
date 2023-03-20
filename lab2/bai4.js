@@ -12,3 +12,4 @@
 
 
  document.write('Xuat chuoi ngay trong tuan: ' + arr);
+ 
