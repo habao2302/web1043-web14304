@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //nhap gia tri can tinh
+let num1 = parseInt(prompt("nhap gia tri 1:"));
+let num2 = parseInt(prompt("nhap gia tri 2:"));
+
+let phepTinh=prompt("nhập phép tính(+,-,*,/):");
+let ketQua;
+switch (phepTinh) {
+    case "+":
+        ketQua=num1+num2;
+        break;
+    case "-":
+        ketQua=num1-num2;
+        break;
+    case "*":
+        ketQua=num1*num2;
+        break;
+    case "/":
+        ketQua=num1/num2;
+        break;
+    default:
+        console.log("khong hop le");
+        break;
+}
+//in ket qua
+alert("ket qua :"+ketQua);
+    </script>
+</body>
+</html>
