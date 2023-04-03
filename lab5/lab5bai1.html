@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Task Manager</title>
+    <style>
+      * {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.task h2 {
+  margin-top: 0;
+}
+
+.task p {
+  margin-bottom: 0;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-buttons button:hover {
+  background-color: maroon;
+}
+
+#edit-task-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.edit-delete button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-delete button:hover {
+  background-color: maroon;
+}
+
+.edit-task-button {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-task-button:hover {
+  background-color: darkgoldenrod;
+}
+    </style>
+</head>
+<body>
+  <div>
+    <h1>TODO LIST</h1>
+    <form>
+      <label for="task-name">Tên Task (lớn hơn 5 kí tự): </label>
+      <input type="text" id="task-name" minlength="5" required>
+      <label for="task-description">Mô Tả (lớn hơn 20 kí tự): </label>
+      <textarea id="task-description" minlength="20" required></textarea>
+      <button id="add-task-btn">Add Task</button>
+    </form>
+    <div id="task-list"></div>
+  </div>
+  
+  <script>
+    const taskForm = document.querySelector('form');
+const taskList = document.getElementById('task-list');
+
+const tasks = [];
+
+function renderTasks() {
+  taskList.innerHTML = '';
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    const taskContainer = document.createElement('div');
+    taskContainer.classList.add('task');
+    const taskHeader = document.createElement('div');
+    taskHeader.classList.add('task-header');
+    const taskName = document.createElement('h2');
+    taskName.textContent = task.name;
+    taskHeader.appendChild(taskName);
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'Edit';
+    editBtn.addEventListener('click', () => {
+      editTask(i);
+    });
+    taskHeader.appendChild(editBtn);
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', () => {
+      deleteTask(i);
+    });
+    taskHeader.appendChild(deleteBtn);
+    taskContainer.appendChild(taskHeader);
+    const taskDescription = document.createElement('p');
+    taskDescription.textContent = task.description;
+    taskContainer.appendChild(taskDescription);
+    taskList.appendChild(taskContainer);
+  }
+}
+
+function addTask(name, description) {
+  tasks.push({name, description});
+  renderTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  renderTasks();
+}
+
+function editTask(index) {
+  const task = tasks[index];
+  const newName = prompt('Enter new task name:', task.name);
+  const newDescription = prompt('Enter new task description:', task.description);
+  if (newName !== null && newDescription !== null &&
+      newName.length >= 5 && newDescription.length >= 20) {
+    tasks[index] = {name: newName, description: newDescription};
+    renderTasks();
+  }
+}
+
+taskForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const taskName = document.getElementById('task-name').value;
+  const taskDescription = document.getElementById('task-description').value;
+  if (taskName.length >= 5 && taskDescription.length >= 20) {
+    addTask(taskName, taskDescription);
+    taskForm.reset();
+  } else {
+    alert('Task name must be at least 5 characters and description must be at least 20 characters');
+  }
+});
+  </script>
+</body>
+</html>
