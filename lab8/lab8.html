@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        border-radius: 3px;
+        width: 700px;
+        padding: 20px;
+        background-color: rgb(191, 221, 225);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+
+      video {
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        height: 30px;
+        width: 120px;
+        margin: 0 10px;
+        border-radius: 20px;
+        color: black;
+      }
+      button:hover{
+        border-color:rgb(22, 23, 22);
+        background-color: rgb(61, 197, 52);
+        color: blue;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <video class="video">
+        <source src="DinhMenh-NooPhuocThinh-8440059.mp3" />
+      </video>
+      <div class="btn">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="stopVideo()">Stop</button>
+        <button onclick="upVolume()">Tăng âm lượng</button>
+        <button onclick="downVolume()">Giảm âm lượng</button>
+        <button class="loop" onclick="autoPlay()">Lặp lại</button>
+      </div>
+</div>
+<script>
+  const video = document.querySelector(".video");
+  function playPause() {
+    video.paused ? video.play() : video.pause();
+  }
+  function stopVideo() {
+
+    video.pause();
+  }
+  var loop = document.querySelector(".loop");
+  var autoVideo = false;
+  function autoPlay() {
+
+    video.loop = !autoVideo;
+
+    loop.innerHTML = video.loop ? "Không lặp lại" : "Lặp lại";
+
+    autoVideo = !autoVideo;
+  }
+  function upVolume() {
+
+    video.volume = video.volume < 1 ? video.volume + 0.1 : video.volume;
+  }
+  function downVolume() {
+
+    video.volume = video.volume > 0 ? video.volume - 0.1 : video.volume;
+  }
+</script>
+</body>
+
+</html>
