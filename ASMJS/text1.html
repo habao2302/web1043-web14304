@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASM By NguyenHuuLoc</title>
+  <script src="text.js"></script>
+  <link rel="stylesheet" href="text.css">
+  <!-- box icon -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="imgg/Kfc_logo.png" alt="">
+    </a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Product</a></li>
+      <li><a href="#customers">Customers</a></li>
+    </ul>
+    <div class="header-icon">
+      <i class='bx bx-cart-alt'></i>
+      <i class="bx bx-search" id="search-icon"></i>
+    </div>
+    <!-- Search box -->
+    <div class="search-box">
+      <input type="search" placeholder="Tim kiem tai day">
+    </div>
+  </header>
+  <!-- Home -->
+  <selection class="home" id="home">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="imgg/slide1.webp" style="width:100%" height="712px">
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="imgg/slide2.webp" style="width:100%" height="712px">
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="imgg/slide3.webp" style="width:100%" height="712px">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+  </selection>
+  <!-- About -->
+  <selection class="about" id="about">
+    <div class="about-img">
+      <img src="imgg/about.png" alt="" width="400" height="250">
+    </div>
+    <div class="about-text">
+      <h2>Lịch sử hình thành</h2>
+      <p>Thân phụ của ông Harland qua đời nên người mẹ phải lao động để trang trải cho gia đình. Vào cái tuổi lên 6, cậu bé Harland đã phải lo lắng việc chăm sóc cho các em nhỏ của mình và làm rất nhiều công việc bếp núc.</p>
+      <p>KFC nổi tiếng với các sản phẩm gà tươi sống. Tất cả các đầu bếp của KFC đều phải trải qua một khóa đào tạo khắc nghiệt để đảm bảo hương vị độc đáo và chất lượng dinh dưỡng cho các món ăn của họ, theo tiêu chuẩn của tập đoàn.</p>
+      <a href="#" class="btn">Learn more</a>
+    </div>
+  </selection>
+  <!-- Product -->
+  <selection class="products" id="products">
+    <div class="heading">
+      <h2>Danh mục món ăn</h2>
+    </div>
+    <div class="products-container">
+      <div class="box">
+        <img src="imgg/sp1.jpg" alt="">
+        <h3>Combo 2 người ăn</h3>
+        <div class="content">
+          <span>209.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp2.jpg" alt="">
+        <h3>6 Bánh gà chiên</h3>
+        <div class="content">
+          <span>120.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp3.jpg" alt="">
+        <h3>Combo mì ý </h3>
+        <div class="content">
+          <span>79.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp4.jpg" alt="">
+        <h3>Đùi gà chiên giòn</h3>
+        <div class="content">
+          <span>49.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp5.jpg" alt="">
+        <h3>Đùi+cánh gà chiên giòn</h3>
+        <div class="content">
+          <span>38.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp6.jpg" alt="">
+        <h3>Gà viên</h3>
+        <div class="content">
+          <span>39.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp7.jpg" alt="">
+        <h3>Trà đào</h3>
+        <div class="content">
+          <span>17.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp8.jpg" alt="">
+        <h3>Trà chanh lipton</h3>
+        <div class="content">
+          <span>17.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+      <div class="box">
+        <img src="imgg/sp9.jpg" alt="">
+        <h3>Pessi </h3>
+        <div class="content">
+          <span>17.000 VND</span>
+          <a href="#">Thêm vào giỏ hàng</a>
+        </div>
+       
+      </div>
+    </div>
+  </selection>
+  <selection class="customers" id="customers">
+    <div class="heading">
+      <h2>Đánh giá của khách hàng</h2>
+    </div>
+    <div class="customers-container">
+      <div class="box">
+        <div class="stars">
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star-half'></i>
+        </div>
+        <p>Dịch vụ ở đây tốt các món ăn đều rất ngon, tôi đến đây thường xuyên vào dịp cuối tuần</p>
+        <h2>Yasin Arafat</h2>
+        <img src="img/rev1.jpg" alt="">
+      </div>
+      <div class="box">
+        <div class="stars">
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star-half'></i>
+        </div>
+        <p>Các món ăn ở đây đều rất ngon, tôi rất yêu gà chiên và gà chiên đến với tôi</p>
+        <h2>Yasin Arafat</h2>
+        <img src="img/rev2.jpg" alt="">
+      </div>
+      <div class="box">
+        <div class="stars">
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star-half'></i>
+        </div>
+        <p>Gà ở đây thì không có gì để mà bàn cãi nữa rồi, quá xuất sắc 10000 điểm</p>
+        <h2>Yasin Arafat</h2>
+        <img src="img/rev3.jpg" alt="">
+      </div>
+    </div>
+  </selection>
+  <selection class="footer">
+    <div class="footer-box">
+      <h2>KFC </h2>
+      <p>Cảm ơn quý khách, chúc quý khách một ngày mới tốt lành</p>
+      <div class="social">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitch"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h2>Hỗ trợ</h2>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Trợ giúp & Hỗ trợ</a></li>
+      <li><a href="#">Chính sách hoàn trả</a></li>
+      <li><a href="#">Điều khoản sử dụng</a></li>
+    </div>
+    <div class="footer-box">
+      <h2>Xem hướng dẫn</h2>
+      <li><a href="#">Tính năng</a></li>
+      <li><a href="#">Nghề Nghiệp</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Chi nhánh của chúng tôi</a></li>
+    </div>
+    <div class="footer-box">
+      <h3>Liên hệ</h3>
+      <div class="contact">
+        <span><i class="bx bxs-map"></i>137 Nguyễn Thị Thập, Đà Nẵng</span>
+        <span><i class="bx bxs-phone"></i>0896475590</span>
+        <span><i class="bx bxs-envelope"></i>locne26112004@gmail.com</span>
+      </div>
+    </div>
+  </selection>
+ 
+  <div class="coppyright">
+    <p>Bản quyền thuộc về NguyenHuuLoc@ </p>
+  </div>
+
+ <script src="main.js"></script>
+</body>
+</html>
