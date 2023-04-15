@@ -10,9 +10,9 @@
     text-decoration: none;
 }
 :root{
-    --main-color:#bc9667;
+    --main-color:#bfbdbd;
     --second-color:#edeae3;
-    --text-color:#1b1b1b;
+    --text-color:#151414;
     --bg-color:#fff;
     --box-shadow:2px 2px 10px 4px rgb(14 55 54 / 15%);
 }
@@ -79,6 +79,7 @@ header.shadow{
     z-index: 100001;
     cursor: pointer;
     display: none;
+   
 }
 .search-box{
     position:absolute;
@@ -111,10 +112,6 @@ header.shadow{
     margin: auto;
     height: 680px;
   }
-  .slideshow-container{
-    
-  }
-  
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
@@ -144,11 +141,11 @@ header.shadow{
   
   /* Caption text */
   .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    color: #030303;
+    font-size:5px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 5px;
     width: 100%;
     text-align: center;
   }
@@ -195,7 +192,7 @@ header.shadow{
     text-transform: uppercase;
 }
 .about-text p{
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     margin: 0.5rem 0 1.1rem;
 }
 .btn{
@@ -207,7 +204,7 @@ header.shadow{
 
 }
 .btn:hover{
-    background: #8a6f4d;
+    background: #000000;
 }
 .heading{
     text-align: center;
@@ -361,7 +358,7 @@ color: var(--bg-color);
 .coppyright{
     padding: 20px;
     text-align: center;
-    background:bisque;
+    background:rgb(118, 117, 115);
 }
 @media (max-width:1058px){
     header{
