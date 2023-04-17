@@ -46,3 +46,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+//Ktra SDT
+document.getElementById("phone").addEventListener("input", function() {
+  this.setCustomValidity("");
+  if (!this.value.match(/^[0-9]{10}$/)) {
+    this.setCustomValidity("Please enter a 10-digit phone number");
+  }
+});
+
+//Ktra Email
+document.getElementById("email").addEventListener("input", function() {
+  this.setCustomValidity("");
+  if (!this.value.match(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)) {
+    this.setCustomValidity("Please enter a valid email address");
+  }
+});
